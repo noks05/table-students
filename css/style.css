@@ -1,0 +1,160 @@
+/* global */
+* {
+   box-sizing: border-box;
+}
+
+body {
+   width: 100%;
+   min-height: 100vh;
+   font-family: 'Arial', sans-serif;
+   font-size: 16px;
+}
+
+ul, ol, li {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+ul {
+   padding-left: 0;
+}
+
+.wrapper {
+   min-width: 100%;
+   min-height: 100vh;
+   background-color: aliceblue;
+}
+
+.container {
+   padding-top: 40px;
+   padding-bottom: 600px;
+}
+
+.contr-form {
+   padding: 20px;
+   /* border: 2px solid white; */
+   box-shadow: 0 0 10px #c7d5ea;
+   margin-bottom: 30px;
+}
+
+@media(max-width: 1200px) {
+   .container {
+      max-width: 100%;
+   }
+}
+
+/* form */
+.form {
+   /* padding: 20px; */
+   background-color: aliceblue;
+}
+
+.form__contr {
+   display: block;
+}
+
+.form__title {
+   margin-bottom: 10px;
+   color: #bcc9dd;
+}
+
+.form-text {
+   padding: 5px;
+   border-radius: 5px;
+   font-size: 16px;
+   background: white;
+}
+
+/* add-student form */
+.add-student {
+   max-width: 600px;
+   margin-bottom: 25px;
+}
+
+.add-student__input-invalid {
+   display: none;
+   color: #d16a00;
+}
+
+.add-student__input-valid {
+   display: none;
+   color: green;
+}
+
+.add-student__input.input-invalid + .add-student__input-invalid {
+   display: block;
+}
+
+.add-student__input.input-valid ~ .add-student__input-valid {
+   display: block;
+}
+
+/* filter */
+.filter__form {
+   display: flex;
+}
+
+@media (max-width: 991px) {
+   .filter__form {
+      display: block;
+   }
+}
+
+.filter__contr {
+   display: flex;
+   flex-direction: column;
+}
+
+.filter__contr:not(:last-child) {
+   margin-right: 10px;
+}
+
+.filter__input-text {
+   flex: 1 0 auto;
+}
+
+.search-help {
+   padding: 20px;
+   color: rgba(15, 160, 226, 0.787);
+}
+
+/* table */
+.table__head-cell {
+   position: relative;
+   padding-right: 40px!important; 
+   transition-property: border-bottom, color;
+   transition-duration: .2s;
+   transition-timing-function: ease-in-out;
+   cursor: pointer;  
+}
+
+.table__head-cell:hover {
+   /* border-bottom: 2px solid #00ccff; */
+   color: #0d6efd;
+}
+
+.table__head-cell::before {
+   content: '';
+   position: absolute;
+   right: 15px;
+   top: 15px;
+   border: 7px solid #0d6efd4f;
+   border-left-color: transparent;
+   border-right-color: transparent;
+   border-bottom-color: transparent;
+   transition: border-top-color .2s ease-in-out;
+}
+
+.table__head-cell:hover::before {
+   border-top-color: #0d6efd;
+}
+
+.table__head-cell_sort {
+   border-bottom: 2px solid #0d6efd!important;
+   color: #0d6efd;
+}
+
+.table__head-cell_sort::before {
+   border-top-color: #0d6efd;
+}
