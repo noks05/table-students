@@ -113,12 +113,12 @@
                break;
             case 2:
                inputItems = addUniqueDataInput(
-                  inputItems, 'Факультет', 'Поле не должно быть пустым',
+                  inputItems, 'Дата рождения', 'Поле не должно быть пустым',
                   'Всё верно!', 'date', '31.12.2000', 'date', '1900-01-01');
                break;
             case 3:
                inputItems = addUniqueDataInput(
-                  inputItems, 'Факультет', 'Поле не должно быть пустым',
+                  inputItems, 'Год начала обучения', 'Поле не должно быть пустым',
                   'Всё верно!', 'year', '2000', 'number', '2000');
                break;
          }
